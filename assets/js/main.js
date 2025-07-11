@@ -70,6 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
     { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
     { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
+    { id: "", image: "assets/images/folder.png", filter: "available-slot", buttonLabel: "Available Slot" },
   ];
   // --- END: LOCAL DATA ---
 

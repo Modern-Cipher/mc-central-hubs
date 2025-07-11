@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { 
       id: "HUBS567705", 
-      image: "assets/images/flavomix.png", 
+      image: "assets/images/flavoMix.png", 
       filter: "flavomix", 
       buttonLabel: "FLAVO MIX PH",
       colors: {

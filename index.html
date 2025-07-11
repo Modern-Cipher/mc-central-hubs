@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Hubs</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/centralhub.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="page-container">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="assets/images/centralhub.png" alt="Modern Cipher Logo" class="header-logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://modern-cipher.github.io/mc-label-generator/">Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="assets/views/pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModalHomepage">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content-wrapper">
+      <div class="container">
+        <h5 class="text-center mb-2 fade-in-from-left">Welcome to</h5>
+        <h1 class="text-center mb-2 gradient-title fade-in-from-right">Central Hubs</h1>
+        <p class="text-center text-muted mb-4 version-display" id="version-display">Loading version...</p>
+        <div class="search-bar-container mb-5">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <input type="text" class="form-control" id="search-input" placeholder="Search Brand..." aria-label="Search" />
+          </div>
+        </div>
+        <div class="row g-4 isotope-grid" id="brand-container"></div>
+      </div>
+    </main>
+
+    <footer class="fade-in" data-aos="fade-up" data-aos-duration="600">
+      <img src="assets/images/mc.png" alt="Modern Cipher Logo" />
+      <div class="social-icons">
+        <a href="#" id="facebook-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" id="tiktok-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" id="messenger-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="#" id="telegram-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" id="viber-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Viber"><i class="fab fa-viber"></i></a>
+        <a href="#" id="gmail-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="#" id="website-link" class="social-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Website"><i class="fas fa-globe"></i></a>
+      </div>
+      <p>Developed by Modern Cipher © 2025</p>
+    </footer>
+  </div>
+
+  <div class="modal fade" id="aboutModalHomepage" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" data-aos="zoom-in" data-aos-duration="600">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">About Central Hubs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="assets/images/mc.png" alt="Modern Cipher Logo" class="modal-logo mb-3" />
+          <p>Central Hubs is a web application designed to streamline file management by consolidating access to multiple cloud storage services in one place. It allows users to manage, add, update, and delete assets efficiently, eliminating the need to open multiple applications for accessing different storage platforms.</p>
+          <p>Developed by <strong>Modern Cipher</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="statsModal" tabindex="-1" aria-labelledby="statsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="statsModalLabel">Asset Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="mb-3" id="statsModalBrandName">Brand Stats</h6>
+          <p class="mb-1"><strong>Subscription Status:</strong></p>
+          <div class="alert alert-info" id="statsModalTrialInfo"></div>
+          <p class="mb-1"><strong>Cloud Storage:</strong></p>
+          <div class="progress mb-2" style="height: 20px;">
+            <div id="statsModalProgressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted" id="statsModalStorageText"></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/version.js"></script>
+</body>
+</html>
